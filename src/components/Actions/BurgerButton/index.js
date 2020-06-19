@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Popper, Paper, MenuList, MenuItem, ButtonBase, Fade } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -41,8 +42,8 @@ const BurgerButton = () => {
                 {headerLinks.map(({ title, href }) => (
                   <MenuItem
                     key={title}
-                    component={ButtonBase}
-                    href={href}
+                    component={Link}
+                    to={href}
                   >
                     {title}
                   </MenuItem>
