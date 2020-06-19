@@ -16,7 +16,7 @@ const ProductDetails = ({ id }) => {
     if (productsAPI.fetchProduct(id)) {
       setTimeout(() => {
         setProduct(productsAPI.fetchProduct(id));
-      }, 500)
+      }, 800)
     } else {
       setError('The requested product is not found.');
     }

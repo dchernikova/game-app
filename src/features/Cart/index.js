@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Button, Grid, Box } from '@material-ui/core';
 
@@ -65,7 +66,9 @@ const Cart = () => {
                 marginY={4}
               >
                 <Button
+                  to="/"
                   size="large"
+                  component={Link}
                   color="secondary"
                   variant="contained"
                 >
@@ -80,8 +83,9 @@ const Cart = () => {
             >
               <Box marginY={1}>
                 <Button
-                  href="/"
+                  to="/"
                   size="large"
+                  component={Link}
                   variant="contained"
                 >
                   Continue Shopping

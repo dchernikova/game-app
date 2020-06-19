@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { Grid, Button } from '@material-ui/core';
 
@@ -68,8 +68,9 @@ const Product = ({ product }) => {
       <Grid align="right">
         {fetchProduct(id) ? (
           <Button
-            href="/cart"
+            to="/cart"
             size="large"
+            component={Link}
             color="secondary"
             variant="contained"
           >

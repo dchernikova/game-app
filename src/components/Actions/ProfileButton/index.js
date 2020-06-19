@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
@@ -17,14 +17,15 @@ const ProfileButton = () => {
     history.push('/profile');
   };
 
-  const handleFailure = (response) => {
-    console.log(response);
-  };
+  const handleFailure = (response) => console.error(response);
 
   return (
     <>
       {isLogged ? (
-        <Button href="/profile">
+        <Button
+          to="/profile"
+          component={Link}
+        >
           <PersonOutlineIcon />
         </Button>
       ) : (

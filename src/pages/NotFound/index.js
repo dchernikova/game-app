@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Grid, Button } from '@material-ui/core';
 
@@ -35,11 +36,11 @@ const NotFoundPage = () => (
 
       <Grid align="center">
         <Button
-          href="/"
+          to="/"
           size="large"
+          component={Link}
           color="secondary"
           variant="contained"
-
         >
           Back to home
         </Button>

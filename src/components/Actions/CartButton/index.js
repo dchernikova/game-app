@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Badge } from '@material-ui/core';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
@@ -27,7 +28,10 @@ const CartButton = () => {
   }, [cart]);
 
   return (
-    <Button href="/cart">
+    <Button
+      to="/cart"
+      component={Link}
+    >
       <StyledBadge badgeContent={count}>
         <ShoppingBasketIcon />
       </StyledBadge>

@@ -15,6 +15,7 @@ const StyledTypography = styled(Typography)`
 
 const StyledGrid = styled(Grid)`
   && {
+    margin: -8px;  
     color: ${({ theme }) => theme.color.blue};
   }
 
@@ -30,15 +31,15 @@ const StyledGrid = styled(Grid)`
   }
 `;
 
-const Option = ({ item }) => {
-  const { id, name, images, price } = item;
+const Option = ({ item, onClick }) => {
+  const { name, images, price } = item;
 
   return (
     <Box padding={1}>
       <StyledGrid
         container
         component={ButtonBase}
-        href={`/product/${id}`}
+        onClick={onClick}
         spacing={2}
       >
         <Grid item xs={5}>

@@ -14,7 +14,7 @@ const FavoriteProducts = () => {
   useEffect(() => {
     setTimeout(() => {
       setProducts(productsAPI.fetchRandomProducts());
-    }, 500)
+    }, 800)
   }, []);
 
   return (

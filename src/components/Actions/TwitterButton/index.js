@@ -5,7 +5,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import Button from './../_components/Button';
 
 const TwitterButton = () => (
-  <Button href="/">
+  <Button>
     <TwitterIcon />
   </Button>
 );

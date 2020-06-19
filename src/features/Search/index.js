@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { OutlinedInput, Box, InputAdornment, Popper, Fade, Paper } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
@@ -33,11 +34,18 @@ const StyledPopper = styled(Popper)`
 `;
 
 const Search = () => {
+  const history = useHistory();
   const [searchQuery, setSearchQuery] = useState('');
   const [results, setResults] = useState([]);
   const anchorRef = useRef(null);
 
   const handleOnChange = (event) => setSearchQuery(event.target.value);
+
+  const handleOptionClick = (id) => {
+    history.push(`/product/${id}`);
+    setSearchQuery('');
+    setResults([]);
+  };
 
   useEffect(() => {
     setResults(productsAPI.fetchProductsByQuery(searchQuery));
@@ -77,6 +85,7 @@ const Search = () => {
                     <Option
                       key={i}
                       item={item}
+                      onClick={() => handleOptionClick(item.id)}
                     />
                   ))}
                 </OptionsWrapper>

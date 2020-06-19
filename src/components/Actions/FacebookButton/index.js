@@ -5,7 +5,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import Button from './../_components/Button';
 
 const FacebookButton = () => (
-  <Button href="/">
+  <Button>
     <FacebookIcon />
   </Button>
 );
