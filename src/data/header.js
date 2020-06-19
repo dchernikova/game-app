@@ -1,19 +1,19 @@
 const headerLinks = [
   {
     title: 'Store',
-    href: '/',
+    href: '/store',
   },
   {
     title: 'Community',
-    href: '/',
+    href: '/community',
   },
   {
     title: 'Chat',
-    href: '/',
+    href: '/chat',
   },
   {
     title: 'Support',
-    href: '/',
+    href: '/support',
   },
 ];
 
