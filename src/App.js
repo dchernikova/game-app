@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { ThemeProvider } from 'styled-components';
 
-export default App;
+import 'swiper/css/swiper.css';
+
+import ScrollToTop from './helpers/ScrollToTop';
+import GlobalStyles from './helpers/GlobalStyles';
+import theme from './theme';
+
+import { AuthenticationProvider } from './contexts/Authentication';
+import { CartProvider } from './contexts/Cart';
+
+import HomePage from './pages/Home';
+import ProfilePage from './pages/Profile';
+import ProductPage from './pages/Product';
+import CartPage from './pages/Cart';
+import NotFoundPage from './pages/NotFound';
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyles />
+
+    <AuthenticationProvider>
+      <CartProvider>
+        <Router>
+          <ScrollToTop />
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/profile" exact component={ProfilePage} />
+            <Route path="/product/:productId" exact component={ProductPage} />
+            <Route path="/cart" exact component={CartPage} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </Router>
+      </CartProvider>
+    </AuthenticationProvider>
+  </ThemeProvider>
+);
+
+export default App
