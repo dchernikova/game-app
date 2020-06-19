@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -24,7 +24,7 @@ const App = () => (
 
     <AuthenticationProvider>
       <CartProvider>
-        <Router>
+        <HashRouter basename='/'>
           <ScrollToTop />
           <Switch>
             <Route path="/" exact component={HomePage} />
@@ -33,7 +33,7 @@ const App = () => (
             <Route path="/cart" exact component={CartPage} />
             <Route component={NotFoundPage} />
           </Switch>
-        </Router>
+        </HashRouter>
       </CartProvider>
     </AuthenticationProvider>
   </ThemeProvider>
