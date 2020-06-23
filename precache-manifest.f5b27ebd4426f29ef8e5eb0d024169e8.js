@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b0fc4067a5a9fbc6f36e3230bdf69ee0",
+    "revision": "4eec758fa80d15df70d555e1f2f2f6c0",
     "url": "/game-app/index.html"
   },
   {
-    "revision": "aaadde1298b7554d5a61",
-    "url": "/game-app/static/css/2.2f75dd9a.chunk.css"
+    "revision": "9ea5decc4bb05874ff3a",
+    "url": "/game-app/static/css/2.5d959eea.chunk.css"
   },
   {
-    "revision": "aaadde1298b7554d5a61",
-    "url": "/game-app/static/js/2.59aef864.chunk.js"
+    "revision": "9ea5decc4bb05874ff3a",
+    "url": "/game-app/static/js/2.50866675.chunk.js"
   },
   {
-    "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/game-app/static/js/2.59aef864.chunk.js.LICENSE.txt"
+    "revision": "f408d1cf3336fb7b0693aa7b1328cd62",
+    "url": "/game-app/static/js/2.50866675.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f83a6cb7cba7256916c9",
-    "url": "/game-app/static/js/main.4b5307db.chunk.js"
+    "revision": "f10b649c5370346626ae",
+    "url": "/game-app/static/js/main.c253192f.chunk.js"
   },
   {
     "revision": "c1a912ea8f61e0c83979",
@@ -60,12 +60,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/game-app/static/media/game-1.bea9918f.jpg"
   },
   {
+    "revision": "d929933e7833256250393df91a808fe6",
+    "url": "/game-app/static/media/game-1.d929933e.jpg"
+  },
+  {
     "revision": "dae40a2a4f7016a89fbb889eaaf4465c",
     "url": "/game-app/static/media/game-1.dae40a2a.jpg"
   },
   {
     "revision": "fe88127e0150e49b82e778a3ff007b28",
     "url": "/game-app/static/media/game-1.fe88127e.jpg"
+  },
+  {
+    "revision": "3b7d5e200e6de2bb675078be36f06a69",
+    "url": "/game-app/static/media/game-2.3b7d5e20.jpg"
   },
   {
     "revision": "41294321346fe99df5d4470cc6119e8b",
@@ -144,8 +152,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/game-app/static/media/game-3.d8b02d3c.jpg"
   },
   {
+    "revision": "e4c2a0cc1b87ccd8b77ad9b1ef211417",
+    "url": "/game-app/static/media/game-3.e4c2a0cc.jpg"
+  },
+  {
     "revision": "edcc5d86ce523623eb0a586153911fd3",
     "url": "/game-app/static/media/game-3.edcc5d86.jpg"
+  },
+  {
+    "revision": "2733ebbb260cdc643957a2550871839c",
+    "url": "/game-app/static/media/game-4.2733ebbb.jpg"
   },
   {
     "revision": "f04ac2de303ca376d0d59a340d071541",
@@ -188,6 +204,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/game-app/static/media/main.b6c2a608.jpg"
   },
   {
+    "revision": "deba1d5c750051ddcded0db07284f9f4",
+    "url": "/game-app/static/media/main.deba1d5c.jpg"
+  },
+  {
     "revision": "efd231ac724c729edf318cf48f16b021",
     "url": "/game-app/static/media/main.efd231ac.jpg"
   },
@@ -218,6 +238,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ae5a661666a64a180496f89a7cfccf06",
     "url": "/game-app/static/media/preview.ae5a6616.jpg"
+  },
+  {
+    "revision": "aec1bef84aa6af92e5aecb6ee621beff",
+    "url": "/game-app/static/media/preview.aec1bef8.jpg"
   },
   {
     "revision": "c8247e61245057367502675dc2530fe8",
