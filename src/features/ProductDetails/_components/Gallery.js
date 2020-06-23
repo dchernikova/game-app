@@ -1,24 +1,29 @@
 import React, { useEffect, useState } from 'react';
+import Lightbox from 'react-image-lightbox';
+
+import 'react-image-lightbox/style.css';
 
 import { ButtonBase } from '@material-ui/core';
 
 import styled from 'styled-components';
 
-import Image from '../../../components/Image';
+import Slide from '../../../components/Slide';
 import Slider from '../../../components/Slider';
 
-const Slide = styled(
+const StyledButton = styled(
   ({ active, ...rest }) => <ButtonBase {...rest} />,
 )`
   && {
-    position: relative;
+    overflow: visible;
 
     margin-top: 32px;
     margin-bottom: 32px;
 
-    border: 1px solid ${({ active, theme }) => (active ? theme.color.secondary : 'transparent')};
+    &::before {
+      border: 1px solid ${({ active, theme }) => (active ? theme.color.secondary : 'transparent')};
 
-    transition: border-color 0.2s;
+      transition: border-color 0.2s;
+    }
 
     &::after {
       content: '';
@@ -46,21 +51,41 @@ const params = {
   slidesPerView: 3,
 };
 
-const Gallery = ({ images, productName }) => {
+const Gallery = ({ images }) => {
   const [activeImage, setActiveImage] = useState(null);
+  const [imageIndex, setImageIndex] = useState(0);
+  const [imageIsOpen, setImageIsOpen] = useState(false);
+
+  const openImage = () => setImageIsOpen(true);
+  const closeImage = () => setImageIsOpen(false);
+  const moveToNextImage = () => setImageIndex((imageIndex + 1) % images.length);
+  const moveToPrevImage = () => setImageIndex((imageIndex + images.length - 1) % images.length);
 
   useEffect(() => {
     setActiveImage(images[0]);
   }, [images]);
 
-  const handleSlideClick = (image) => setActiveImage(image);
+  const handleSlideClick = (image, i) => {
+    setActiveImage(image);
+    setImageIndex(i);
+  };
 
   return (
     <>
-      {activeImage && (
-        <Image
-          src={activeImage}
-          alt={productName}
+      <Slide
+        onClick={openImage}
+        imageSrc={activeImage}
+        slideComponent={ButtonBase}
+      />
+
+      {imageIsOpen && (
+        <Lightbox
+          mainSrc={images[imageIndex]}
+          nextSrc={images[(imageIndex + 1) % images.length]}
+          prevSrc={images[(imageIndex + images.length - 1) % images.length]}
+          onCloseRequest={closeImage}
+          onMovePrevRequest={moveToPrevImage}
+          onMoveNextRequest={moveToNextImage}
         />
       )}
 
@@ -68,14 +93,11 @@ const Gallery = ({ images, productName }) => {
         {images.map((image, i) => (
           <Slide
             key={i}
+            imageSrc={image}
             active={activeImage === image}
-            onClick={() => handleSlideClick(image)}
-          >
-            <Image
-              src={image}
-              alt={productName + i}
-            />
-          </Slide>
+            onClick={() => handleSlideClick(image, i)}
+            slideComponent={StyledButton}
+          />
         ))}
       </Slider>
     </>

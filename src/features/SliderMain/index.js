@@ -59,7 +59,8 @@ const SliderMain = ({ slides = [] }) => (
       {slides.map((slide) => (
         <Slide
           key={slide.id}
-          slide={slide}
+          to={`/product/${slide.id}`}
+          imageSrc={slide.images.main}
         />
       ))}
     </Slider>

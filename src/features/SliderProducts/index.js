@@ -64,10 +64,10 @@ const SliderProducts = ({ slides = [] }) => (
     {slides.map((slide) => (
       <Slide
         key={slide.id}
-        slide={slide}
         aspectRatio={[3, 4]}
         slideComponent={StyledLink}
-        preview
+        to={`/product/${slide.id}`}
+        imageSrc={slide.images.preview}
       >
         <StyledBox>
           <StyledTypography

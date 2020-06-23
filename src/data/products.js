@@ -28,6 +28,9 @@ import dishonoredPreview from './../assets/dishonored/preview.jpg';
 import commandos3Main from './../assets/commandos/main.jpg';
 import commandos3Preview from './../assets/commandos/preview.jpg';
 
+import detroitBecomeHumanMain from './../assets/detroit-become-human/main.jpg';
+import detroitBecomeHumanPreview from './../assets/detroit-become-human/preview.jpg';
+
 export const products = [
   {
     id: 1,
@@ -117,6 +120,15 @@ export const products = [
     images: {
       main: commandos3Main,
       preview: commandos3Preview,
+    }
+  },
+  {
+    id: 11,
+    name: 'Detroit: Become Human',
+    price: '$70.99',
+    images: {
+      main: detroitBecomeHumanMain,
+      preview: detroitBecomeHumanPreview,
     }
   },
 ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 
 import Skeleton from '../../../components/Skeleton';
 import SkeletonImage from '../../../components/SkeletonImage';
@@ -41,18 +41,28 @@ const SkeletonProduct = () => (
       <Grid item xs={12} sm={5}>
         <SkeletonImage />
 
-        <Typography marginY={4}>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-        </Typography>
+        <Box marginY={4}>
+          <Typography variant="body2" marginBottom={4}>
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </Typography>
 
-        <Typography>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-        </Typography>
+          <Typography variant="body2" marginBottom={1}>
+            <Skeleton />
+          </Typography>
+
+          <Typography variant="body2" marginBottom={1}>
+            <Skeleton />
+          </Typography>
+
+          <Typography variant="body2">
+            <Skeleton />
+            <Skeleton />
+          </Typography>
+        </Box>
       </Grid>
     </Grid>
   </>

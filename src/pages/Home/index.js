@@ -9,12 +9,16 @@ import SliderProducts from '../../features/SliderProducts';
 import productsAPI from '../../api/products';
 
 const HomePage = () => {
-  const [products, setProducts] = useState([]);
   const [topProducts, setTopProducts] = useState([]);
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+  const [specialProducts, setSpecialProducts] = useState([]);
+  const [discountProducts, setDiscountProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(productsAPI.fetchProducts());
     setTopProducts(productsAPI.fetchRandomProducts());
+    setFeaturedProducts(productsAPI.fetchShuffledProducts());
+    setSpecialProducts(productsAPI.fetchShuffledProducts());
+    setDiscountProducts(productsAPI.fetchShuffledProducts());
   }, []);
 
   return (
@@ -22,15 +26,15 @@ const HomePage = () => {
       <SliderMain slides={topProducts} />
 
       <Section title="Featured & Recommended">
-        <SliderProducts slides={products} />
+        <SliderProducts slides={featuredProducts} />
       </Section>
 
       <Section title="Special Offers">
-        <SliderProducts slides={products} />
+        <SliderProducts slides={specialProducts} />
       </Section>
 
       <Section title="Under $10 USD">
-        <SliderProducts slides={products} />
+        <SliderProducts slides={discountProducts} />
       </Section>
     </Layout>
   )

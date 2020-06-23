@@ -9,7 +9,7 @@ import { getAspectRatio } from '../../helpers/_utils/getAspectRatio';
 import FadeInAnimation from '../../helpers/Animations/FadeIn';
 
 const StyledBox = styled(
-  ({ aspectRatio, ...rest }) => <Box {...rest} />,
+  ({ aspectRatio, imageSrc, ...rest }) => <Box {...rest} />,
 )`
   ${FadeInAnimation};
 
@@ -17,6 +17,8 @@ const StyledBox = styled(
   overflow: hidden;
 
   display: flex;
+
+  width: 100%;
 
   background: url(${({ image }) => image}) no-repeat center / cover;
   border-radius: 16px;
@@ -31,20 +33,21 @@ const StyledBox = styled(
   }
 `;
 
-const Slide = ({ slideComponent = Link, preview, aspectRatio, slide, children, ...props }) => {
-  const { id, images } = slide;
-
-  return (
-    <StyledBox
-      aspectRatio={aspectRatio}
-      component={slideComponent}
-      image={preview ? images.preview : images.main}
-      to={`/product/${id}`}
-      {...props}
-    >
-      {children}
-    </StyledBox>
-  )
-};
+const Slide = ({
+  slideComponent = Link,
+  aspectRatio,
+  imageSrc,
+  children,
+  ...props
+}) => (
+  <StyledBox
+    aspectRatio={aspectRatio}
+    component={slideComponent}
+    image={imageSrc}
+    {...props}
+  >
+    {children}
+  </StyledBox>
+);
 
 export default Slide

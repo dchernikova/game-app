@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import { Grid, Button } from '@material-ui/core';
+import { Grid, Button, Box } from '@material-ui/core';
 
+// import Tag from './Tag';
 import Gallery from './Gallery';
 
 import Image from '../../../components/Image';
@@ -35,10 +36,7 @@ const Product = ({ product }) => {
         spacing={4}
       >
         <Grid item xs={12} sm={7}>
-          <Gallery
-            images={images.gamePreview}
-            productName={name}
-          />
+          <Gallery images={images.gamePreview} />
         </Grid>
 
         <Grid item xs={12} sm={5}>
@@ -47,21 +45,31 @@ const Product = ({ product }) => {
             alt={name}
           />
 
-          <Typography marginY={4}>
-            {description}
-          </Typography>
+          <Box marginY={4}>
+            <Typography variant="body2" marginBottom={4}>
+              {description}
+            </Typography>
 
-          <Typography>
-            User reviews:
-          </Typography>
+            <Typography variant="body2" marginBottom={1}>
+              All reviews: <Typography variant="body2" component="span" color="secondary">Overwhelmingly Positive</Typography> (2 323)
+            </Typography>
+            <Typography variant="body2" marginBottom={1}>
+              Release date: <Typography variant="body2" component="span">18 Jun, 2020</Typography>
+            </Typography>
+            <Typography variant="body2">
+              Developer: <Typography variant="body2" component="span" color="secondary">Quantic Dream</Typography>
+            </Typography>
+            <Typography variant="body2">
+              Publisher: <Typography variant="body2" component="span" color="secondary">Quantic Dream</Typography>
+            </Typography>
+          </Box>
 
-          <Typography>
-            Recent: <Typography component="span" color="secondary">Overwhelmingly Positive</Typography> (332
-            reviews)
-          </Typography>
-          <Typography marginBottom={4}>
-            Overall: <Typography component="span" color="secondary">Very Positive</Typography> (5 275 reviews)
-          </Typography>
+          {/*<Box marginY={4}>*/}
+          {/*  <Tag label="Adventure" />*/}
+          {/*  <Tag label="Story Rich" />*/}
+          {/*  <Tag label="Choices Matter" />*/}
+          {/*  <Tag label="Third Person" />*/}
+          {/*</Box>*/}
         </Grid>
       </Grid>
 

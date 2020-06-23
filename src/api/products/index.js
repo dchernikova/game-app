@@ -5,5 +5,6 @@ export default {
   fetchProducts: () => products,
   fetchProduct: (id) => productDetails.find((product) => product.id === +id),
   fetchProductsByQuery: (query) => products.filter((product) => (product.name.toLowerCase()).includes(query.toLowerCase())),
-  fetchRandomProducts: () => products.sort(() => 0.5 - Math.random()).slice(0, 3),
+  fetchShuffledProducts: () => [...products].sort(() => 0.5 - Math.random()),
+  fetchRandomProducts: () => [...products].sort(() => 0.5 - Math.random()).slice(0, 3),
 }

@@ -49,6 +49,12 @@ import dishonoredGame1 from '../assets/dishonored/game-1.jpg';
 import dishonoredGame2 from '../assets/dishonored/game-2.jpg';
 import dishonoredGame3 from '../assets/dishonored/game-3.jpg';
 
+import detroitBecomeHumanMain from '../assets/detroit-become-human/main.jpg';
+import detroitBecomeHumanGame1 from '../assets/detroit-become-human/game-1.jpg';
+import detroitBecomeHumanGame2 from '../assets/detroit-become-human/game-2.jpg';
+import detroitBecomeHumanGame3 from '../assets/detroit-become-human/game-3.jpg';
+import detroitBecomeHumanGame4 from '../assets/detroit-become-human/game-4.jpg';
+
 const productDetails = [
   {
     id: 1,
@@ -138,6 +144,15 @@ const productDetails = [
     images: {
       main: commandos3Main,
       gamePreview: [commandos3Game1, commandos3Game2, commandos3Game3],
+    }
+  },
+  {
+    id: 11,
+    name: 'Detroit: Become Human',
+    description: 'Detroit: Become Human puts the destiny of both mankind and androids in your hands, taking you to a near future where machines have become more intelligent than humans. Every choice you make affects the outcome of the game, with one of the most intricately branching narratives ever created.',
+    images: {
+      main: detroitBecomeHumanMain,
+      gamePreview: [detroitBecomeHumanGame1, detroitBecomeHumanGame2, detroitBecomeHumanGame3, detroitBecomeHumanGame4],
     }
   },
 ];

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Popper, Paper, MenuList, MenuItem, ButtonBase, Fade } from '@material-ui/core';
+import { Popper, Paper, MenuList, MenuItem, Fade } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import styled from 'styled-components';
