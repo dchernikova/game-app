@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Grid, Box } from '@material-ui/core';
 
-import profile from '../../../assets/profile-placeholder.png';
+import profile from '../../../assets/profile-placeholder.svg';
 
 import Image from '../../../components/Image';
 import Typography from '../../../components/Typography';
