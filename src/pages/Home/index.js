@@ -15,10 +15,10 @@ const HomePage = () => {
   const [discountProducts, setDiscountProducts] = useState([]);
 
   useEffect(() => {
-    setTopProducts(productsAPI.fetchRandomProducts());
-    setFeaturedProducts(productsAPI.fetchShuffledProducts());
-    setSpecialProducts(productsAPI.fetchShuffledProducts());
-    setDiscountProducts(productsAPI.fetchShuffledProducts());
+    setTopProducts(productsAPI.fetchProducts().slice(0, 4));
+    setFeaturedProducts(productsAPI.fetchProducts());
+    setSpecialProducts(productsAPI.fetchProducts());
+    setDiscountProducts(productsAPI.fetchProducts());
   }, []);
 
   return (
