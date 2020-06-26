@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.js": "/game-app/static/js/main.c253192f.chunk.js",
-    "main.js.map": "/game-app/static/js/main.c253192f.chunk.js.map",
+    "main.js": "/game-app/static/js/main.014945c7.chunk.js",
+    "main.js.map": "/game-app/static/js/main.014945c7.chunk.js.map",
     "runtime-main.js": "/game-app/static/js/runtime-main.34b88d3f.js",
     "runtime-main.js.map": "/game-app/static/js/runtime-main.34b88d3f.js.map",
     "static/css/2.5d959eea.chunk.css": "/game-app/static/css/2.5d959eea.chunk.css",
-    "static/js/2.50866675.chunk.js": "/game-app/static/js/2.50866675.chunk.js",
-    "static/js/2.50866675.chunk.js.map": "/game-app/static/js/2.50866675.chunk.js.map",
+    "static/js/2.e4e8dbd1.chunk.js": "/game-app/static/js/2.e4e8dbd1.chunk.js",
+    "static/js/2.e4e8dbd1.chunk.js.map": "/game-app/static/js/2.e4e8dbd1.chunk.js.map",
     "index.html": "/game-app/index.html",
-    "precache-manifest.f5b27ebd4426f29ef8e5eb0d024169e8.js": "/game-app/precache-manifest.f5b27ebd4426f29ef8e5eb0d024169e8.js",
+    "precache-manifest.2185e70e7ac2bda2071080ae1b1582ac.js": "/game-app/precache-manifest.2185e70e7ac2bda2071080ae1b1582ac.js",
     "service-worker.js": "/game-app/service-worker.js",
     "static/css/2.5d959eea.chunk.css.map": "/game-app/static/css/2.5d959eea.chunk.css.map",
-    "static/js/2.50866675.chunk.js.LICENSE.txt": "/game-app/static/js/2.50866675.chunk.js.LICENSE.txt",
+    "static/js/2.e4e8dbd1.chunk.js.LICENSE.txt": "/game-app/static/js/2.e4e8dbd1.chunk.js.LICENSE.txt",
     "static/media/footer-bg.jpg": "/game-app/static/media/footer-bg.e66d0895.jpg",
     "static/media/game-1.jpg": "/game-app/static/media/game-1.fe88127e.jpg",
     "static/media/game-2.jpg": "/game-app/static/media/game-2.e5f60812.jpg",
     "static/media/game-3.jpg": "/game-app/static/media/game-3.edcc5d86.jpg",
     "static/media/game-4.jpg": "/game-app/static/media/game-4.f04ac2de.jpg",
     "static/media/main.jpg": "/game-app/static/media/main.efd231ac.jpg",
-    "static/media/preview.jpg": "/game-app/static/media/preview.fab1f74e.jpg"
+    "static/media/preview.jpg": "/game-app/static/media/preview.fab1f74e.jpg",
+    "static/media/profile-placeholder.svg": "/game-app/static/media/profile-placeholder.3a4b6050.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.34b88d3f.js",
     "static/css/2.5d959eea.chunk.css",
-    "static/js/2.50866675.chunk.js",
-    "static/js/main.c253192f.chunk.js"
+    "static/js/2.e4e8dbd1.chunk.js",
+    "static/js/main.014945c7.chunk.js"
   ]
 }
