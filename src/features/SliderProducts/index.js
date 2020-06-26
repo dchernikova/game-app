@@ -30,8 +30,6 @@ const StyledBox = styled(Box)`
 `;
 
 const StyledLink = styled(Link)`
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(${({ image }) => image}) no-repeat center / cover;
-
   &:hover {
     ${StyledBox} {
       background-color: rgba(0, 0, 40, 0.6);
@@ -63,6 +61,7 @@ const SliderProducts = ({ slides = [] }) => (
   <Slider rebuildOnUpdate {...params}>
     {slides.map((slide) => (
       <Slide
+        overlay
         key={slide.id}
         aspectRatio={[3, 4]}
         slideComponent={StyledLink}

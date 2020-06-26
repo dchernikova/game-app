@@ -9,7 +9,7 @@ import { getAspectRatio } from '../../helpers/_utils/getAspectRatio';
 import FadeInAnimation from '../../helpers/Animations/FadeIn';
 
 const StyledBox = styled(
-  ({ aspectRatio, imageSrc, ...rest }) => <Box {...rest} />,
+  ({ aspectRatio, image, overlay, ...rest }) => <Box {...rest} />,
 )`
   ${FadeInAnimation};
 
@@ -20,7 +20,7 @@ const StyledBox = styled(
 
   width: 100%;
 
-  background: url(${({ image }) => image}) no-repeat center / cover;
+  background: ${({ overlay }) => overlay && 'linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),'} url(${({ image }) => image}) no-repeat center / cover;
   border-radius: 16px;
 
   &::before {
@@ -37,6 +37,7 @@ const Slide = ({
   slideComponent = Link,
   aspectRatio,
   imageSrc,
+  overlay,
   children,
   ...props
 }) => (
@@ -44,6 +45,7 @@ const Slide = ({
     aspectRatio={aspectRatio}
     component={slideComponent}
     image={imageSrc}
+    overlay={overlay}
     {...props}
   >
     {children}

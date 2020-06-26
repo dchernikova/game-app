@@ -57,7 +57,10 @@ const Gallery = ({ images }) => {
   const [imageIsOpen, setImageIsOpen] = useState(false);
 
   const openImage = () => setImageIsOpen(true);
-  const closeImage = () => setImageIsOpen(false);
+  const closeImage = () => {
+    setImageIsOpen(false);
+    setImageIndex(images.indexOf(activeImage));
+  };
   const moveToNextImage = () => setImageIndex((imageIndex + 1) % images.length);
   const moveToPrevImage = () => setImageIndex((imageIndex + images.length - 1) % images.length);
 
@@ -89,7 +92,7 @@ const Gallery = ({ images }) => {
         />
       )}
 
-      <Slider {...params}>
+      <Slider shouldSwiperUpdate {...params}>
         {images.map((image, i) => (
           <Slide
             key={i}
