@@ -14,10 +14,10 @@ import { useAuthentication } from '../../contexts/Authentication';
 
 const Profile = () => {
   const history = useHistory();
-  const { userData, fetchData, isLogged } = useAuthentication();
+  const { user, fetchUser, isLogged } = useAuthentication();
 
   useEffect(() => {
-    fetchData();
+    fetchUser();
   }, []);
 
   if (!isLogged) {
@@ -31,8 +31,8 @@ const Profile = () => {
         spacing={4}
       >
         <Grid item xs={12} md={7}>
-          {userData ? (
-            <ProfileComponent data={userData} />
+          {user ? (
+            <ProfileComponent data={user} />
           ) : (
             <SkeletonProfile />
           )}

@@ -10,10 +10,10 @@ import { useAuthentication } from '../../../contexts/Authentication';
 
 const ProfileButton = () => {
   const history = useHistory();
-  const { setUserData, isLogged } = useAuthentication();
+  const { setUser, isLogged } = useAuthentication();
 
   const handleSuccess = (response) => {
-    setUserData(response.profileObj);
+    setUser(response.profileObj);
     history.push('/profile');
   };
 

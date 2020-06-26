@@ -8,10 +8,10 @@ import { useAuthentication } from '../../../contexts/Authentication';
 
 const LogoutButton = () => {
   const history = useHistory();
-  const { removeUserData } = useAuthentication();
+  const { removeUser } = useAuthentication();
 
   const handleLogout = () => {
-    removeUserData();
+    removeUser();
     history.push('/')
   };
 

@@ -19,27 +19,27 @@ const AuthenticationProvider = (props) => {
 const useAuthentication = () => {
   const [state, setState] = useContext(AuthenticationContext);
 
-  const fetchData = () => setState(storage.getItem('user'));
+  const fetchUser = () => setState(storage.getItem('user'));
 
-  const userData = state;
+  const user = state;
 
-  const setUserData = (data) => {
+  const setUser = (data) => {
     storage.setItem('user', data);
-    fetchData();
+    fetchUser();
   };
 
-  const removeUserData = () => {
+  const removeUser = () => {
     storage.removeItem('user', {});
-    fetchData();
+    fetchUser();
   };
 
-  const isLogged = userData && Object.keys(userData).length !== 0;
+  const isLogged = user && Object.keys(user).length !== 0;
 
   return ({
-    userData,
-    setUserData,
-    removeUserData,
-    fetchData,
+    user,
+    setUser,
+    removeUser,
+    fetchUser,
     isLogged,
   })
 };
