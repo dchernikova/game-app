@@ -57,7 +57,7 @@ import detroitBecomeHumanGame4 from '../assets/detroit-become-human/game-4.jpg';
 
 const productDetails = [
   {
-    id: 1,
+    id: 3766,
     name: 'Thief',
     description: 'Garrett, the Master Thief, steps out of the shadows into the City. In this treacherous place, where the Baron’s Watch spreads a rising tide of fear and oppression, his skills are the only things he can trust. Even the most cautious citizens and their best-guarded possessions are not safe from his reach.',
     images: {
@@ -66,7 +66,7 @@ const productDetails = [
     }
   },
   {
-    id: 2,
+    id: 58762,
     name: 'Gears Tactics',
     description: 'Gears Tactics is the fast-paced, turn-based strategy game from one of the most-acclaimed video game franchises – Gears of War. Outnumbered and fighting for survival, recruit and command your squad to hunt down an evil mastermind who makes monsters.',
     images: {
@@ -75,7 +75,7 @@ const productDetails = [
     }
   },
   {
-    id: 3,
+    id: 1447,
     name: 'Deus Ex: Mankind Divided',
     description: 'Now an experienced covert operative, Adam Jensen is forced to operate in a world that has grown to despise his kind. Armed with a new arsenal of state-of-the-art weapons and augmentations, he must choose the right approach, along with who to trust, in order to unravel a vast worldwide conspiracy.',
     images: {
@@ -84,7 +84,7 @@ const productDetails = [
     }
   },
   {
-    id: 4,
+    id: 28110,
     name: 'Vampyr',
     description: 'London, 1918. You are newly-turned Vampyr Dr. Jonathan Reid. As a doctor, you must find a cure to save the city’s flu-ravaged citizens. As a Vampyr, you are cursed to feed on those you vowed to heal.',
     images: {
@@ -93,7 +93,7 @@ const productDetails = [
     }
   },
   {
-    id: 5,
+    id: 30407,
     name: 'Neverwinter Nights',
     description: 'Return to the Forgotten Realms in this bestselling Dungeons & Dragons roleplaying game. Combines all the content of Neverwinter Nights Diamond Edition with all-new enhanced features. Includes 100+ hours of award-winning adventures and the tools to create your own!',
     images: {
@@ -102,7 +102,7 @@ const productDetails = [
     }
   },
   {
-    id: 6,
+    id: 277932,
     name: 'SpellForce 3: Soul Harvest',
     description: 'Three years after the Purity Wars, Nortander is on the cusp of a new era.',
     images: {
@@ -111,7 +111,7 @@ const productDetails = [
     }
   },
   {
-    id: 7,
+    id: 274480,
     name: 'Mortal Kombat 11',
     description: 'Mortal Kombat is back and better than ever in the next evolution of the iconic franchise.',
     images: {
@@ -120,7 +120,7 @@ const productDetails = [
     }
   },
   {
-    id: 8,
+    id: 19585,
     name: 'Etherlords II',
     description: 'The saga continues! Etherlords II takes you back to the world of Ether and into a whole new realm of fantastic possibilities. Lead your hero on an unforgettable journey through lands filled with unsurpassed beauty and danger to unlock the ultimate mystery.',
     images: {
@@ -129,7 +129,7 @@ const productDetails = [
     }
   },
   {
-    id: 9,
+    id: 4248,
     name: 'Dishonored',
     description: 'Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.',
     images: {
@@ -138,7 +138,7 @@ const productDetails = [
     }
   },
   {
-    id: 10,
+    id: 19627,
     name: 'Commandos 2: Men of Courage',
     description: 'Commandos 2: Men of Courage is a tactical action/strategy game set against the backdrop of World War II. Take control of an elite group of commandos who must venture deep into enemy territory and utilize their combined expertise to complete a series of mission-based objectives.',
     images: {
@@ -147,7 +147,7 @@ const productDetails = [
     }
   },
   {
-    id: 11,
+    id: 29177,
     name: 'Detroit: Become Human',
     description: 'Detroit: Become Human puts the destiny of both mankind and androids in your hands, taking you to a near future where machines have become more intelligent than humans. Every choice you make affects the outcome of the game, with one of the most intricately branching narratives ever created.',
     images: {

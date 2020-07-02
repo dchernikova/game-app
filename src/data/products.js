@@ -33,7 +33,7 @@ import detroitBecomeHumanPreview from './../assets/detroit-become-human/preview.
 
 export const products = [
   {
-    id: 1,
+    id: 3766,
     name: 'Thief',
     price: '$10.99',
     images: {
@@ -42,7 +42,7 @@ export const products = [
     }
   },
   {
-    id: 2,
+    id: 58762,
     name: 'Gears Tactics',
     price: '$45.99',
     images: {
@@ -51,7 +51,7 @@ export const products = [
     }
   },
   {
-    id: 3,
+    id: 1447,
     name: 'Deus Ex: Mankind Divided',
     price: '$45.99',
     images: {
@@ -60,7 +60,7 @@ export const products = [
     }
   },
   {
-    id: 4,
+    id: 28110,
     name: 'Vampyr',
     price: '$45.99',
     images: {
@@ -69,7 +69,7 @@ export const products = [
     }
   },
   {
-    id: 5,
+    id: 30407,
     name: 'Neverwinter Nights',
     price: '$10.99',
     images: {
@@ -78,7 +78,7 @@ export const products = [
     }
   },
   {
-    id: 6,
+    id: 277932,
     name: 'SpellForce 3: Soul Harvest',
     price: '$10.99',
     images: {
@@ -87,7 +87,7 @@ export const products = [
     }
   },
   {
-    id: 7,
+    id: 274480,
     name: 'Mortal Kombat 11',
     price: '$45.99',
     images: {
@@ -96,7 +96,7 @@ export const products = [
     }
   },
   {
-    id: 8,
+    id: 19585,
     name: 'Etherlords II',
     price: '$10.99',
     images: {
@@ -105,7 +105,7 @@ export const products = [
     }
   },
   {
-    id: 9,
+    id: 4248,
     name: 'Dishonored',
     price: '$10.99',
     images: {
@@ -114,7 +114,7 @@ export const products = [
     }
   },
   {
-    id: 10,
+    id: 19627,
     name: 'Commandos 2: Men of Courage',
     price: '$20.99',
     images: {
@@ -123,7 +123,7 @@ export const products = [
     }
   },
   {
-    id: 11,
+    id: 29177,
     name: 'Detroit: Become Human',
     price: '$70.99',
     images: {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Lightbox from 'react-image-lightbox';
 
 import 'react-image-lightbox/style.css';
@@ -9,6 +10,8 @@ import styled from 'styled-components';
 
 import Slide from '../../../components/Slide';
 import Slider from '../../../components/Slider';
+
+import SkeletonGallery from './SkeletonGallery';
 
 const StyledButton = styled(
   ({ active, ...rest }) => <ButtonBase {...rest} />,
@@ -51,7 +54,8 @@ const params = {
   slidesPerView: 3,
 };
 
-const Gallery = ({ images }) => {
+const Gallery = ({ id }) => {
+  const [images, setImages] = useState([]);
   const [activeImage, setActiveImage] = useState(null);
   const [imageIndex, setImageIndex] = useState(0);
   const [imageIsOpen, setImageIsOpen] = useState(false);
@@ -65,6 +69,14 @@ const Gallery = ({ images }) => {
   const moveToPrevImage = () => setImageIndex((imageIndex + images.length - 1) % images.length);
 
   useEffect(() => {
+    axios.get(`https://api.rawg.io/api/games/${id}/screenshots`)
+      .then((response) => {
+        const images = response.data.results.map((item) => item.image);
+        setImages(images)
+      });
+  }, [id]);
+
+  useEffect(() => {
     setActiveImage(images[0]);
   }, [images]);
 
@@ -75,34 +87,40 @@ const Gallery = ({ images }) => {
 
   return (
     <>
-      <Slide
-        onClick={openImage}
-        imageSrc={activeImage}
-        slideComponent={ButtonBase}
-      />
-
-      {imageIsOpen && (
-        <Lightbox
-          mainSrc={images[imageIndex]}
-          nextSrc={images[(imageIndex + 1) % images.length]}
-          prevSrc={images[(imageIndex + images.length - 1) % images.length]}
-          onCloseRequest={closeImage}
-          onMovePrevRequest={moveToPrevImage}
-          onMoveNextRequest={moveToNextImage}
-        />
-      )}
-
-      <Slider shouldSwiperUpdate {...params}>
-        {images.map((image, i) => (
+      {images.length !== 0 ? (
+        <>
           <Slide
-            key={i}
-            imageSrc={image}
-            active={activeImage === image}
-            onClick={() => handleSlideClick(image, i)}
-            slideComponent={StyledButton}
+            onClick={openImage}
+            imageSrc={activeImage}
+            slideComponent={ButtonBase}
           />
-        ))}
-      </Slider>
+
+          {imageIsOpen && (
+            <Lightbox
+              mainSrc={images[imageIndex]}
+              nextSrc={images[(imageIndex + 1) % images.length]}
+              prevSrc={images[(imageIndex + images.length - 1) % images.length]}
+              onCloseRequest={closeImage}
+              onMovePrevRequest={moveToPrevImage}
+              onMoveNextRequest={moveToNextImage}
+            />
+          )}
+
+          <Slider shouldSwiperUpdate {...params}>
+            {images.map((image, i) => (
+              <Slide
+                key={image}
+                imageSrc={image}
+                active={activeImage === image}
+                onClick={() => handleSlideClick(image, i)}
+                slideComponent={StyledButton}
+              />
+            ))}
+          </Slider>
+        </>
+      ) : (
+        <SkeletonGallery />
+      )}
     </>
   )
 };

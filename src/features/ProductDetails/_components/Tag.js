@@ -2,9 +2,9 @@ import { Chip } from '@material-ui/core';
 
 import styled from 'styled-components';
 
-const Tag = styled(Chip).attrs(() => ({ variant: 'outlined', size: 'small' }))`
+const Tag = styled(Chip)`
   && {
-    color: ${({ theme }) => theme.color.primary};
+    background-color: ${({ theme }) => theme.color.primary};
     border-color: ${({ theme }) => theme.color.primary};
   }
 

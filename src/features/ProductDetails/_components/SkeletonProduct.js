@@ -5,6 +5,8 @@ import Skeleton from '../../../components/Skeleton';
 import SkeletonImage from '../../../components/SkeletonImage';
 import Typography from '../../../components/Typography';
 
+import SkeletonGallery from './SkeletonGallery';
+
 const SkeletonProduct = () => (
   <>
     <Typography
@@ -20,48 +22,38 @@ const SkeletonProduct = () => (
       spacing={4}
     >
       <Grid item xs={12} sm={7}>
-        <SkeletonImage />
+        <SkeletonGallery />
 
-        <Grid
-          container
-          spacing={4}
-        >
-          <Grid item xs={4}>
-            <SkeletonImage marginY={4} />
-          </Grid>
-          <Grid item xs={4}>
-            <SkeletonImage marginY={4} />
-          </Grid>
-          <Grid item xs={4}>
-            <SkeletonImage marginY={4} />
-          </Grid>
-        </Grid>
+        <Typography marginBottom={4}>
+          <Skeleton />
+          <Skeleton />
+          <Skeleton />
+          <Skeleton />
+        </Typography>
       </Grid>
 
       <Grid item xs={12} sm={5}>
         <SkeletonImage />
 
         <Box marginY={4}>
-          <Typography marginBottom={4}>
+          <Typography marginBottom={1}>
             <Skeleton />
-            <Skeleton />
-            <Skeleton />
+          </Typography>
+
+          <Typography marginBottom={1}>
             <Skeleton />
             <Skeleton />
           </Typography>
 
-          {/*<Typography marginBottom={1}>*/}
-          {/*  <Skeleton />*/}
-          {/*</Typography>*/}
+          <Typography marginBottom={1}>
+            <Skeleton />
+            <Skeleton />
+          </Typography>
 
-          {/*<Typography marginBottom={1}>*/}
-          {/*  <Skeleton />*/}
-          {/*</Typography>*/}
-
-          {/*<Typography>*/}
-          {/*  <Skeleton />*/}
-          {/*  <Skeleton />*/}
-          {/*</Typography>*/}
+          <Typography>
+            <Skeleton />
+            <Skeleton />
+          </Typography>
         </Box>
       </Grid>
     </Grid>
