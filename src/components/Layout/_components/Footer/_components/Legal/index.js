@@ -21,7 +21,7 @@ const Legal = () => (
   <StyledBox boxShadow={3}>
     <Wrapper>
       <Typography>
-        Some data and images are provided by <StyledLink href="https://api.rawg.io/docs" target="_blank">RAWG</StyledLink>.
+        Some data and images are provided by <StyledLink href="https://api.rawg.io/docs" target="_blank" rel="noopener noreferrer">RAWG</StyledLink>.
       </Typography>
     </Wrapper>
   </StyledBox>

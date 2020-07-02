@@ -22,7 +22,7 @@ import Logo from '../Logo';
 import Legal from './_components/Legal';
 
 const Content = styled(Box)`
-  padding: 40px 0;
+  padding: 40px 0 24px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(${bg}) no-repeat center / cover;
 `;
 
@@ -79,7 +79,7 @@ const Footer = () => (
         </Grid>
       </Box>
 
-      <StyledBox>
+      <StyledBox marginY={2}>
         <Box>
           <ProfileButton />
           <CartButton />

@@ -19,7 +19,12 @@ const ProductDetails = ({ id }) => {
   useEffect(() => {
     setTimeout(() => {
       axios.get(`https://api.rawg.io/api/games/${id}`)
-        .then((response) => setProduct(response.data));
+        .then((response) => {
+          setProduct(response.data)
+        }).catch(error => {
+        console.error(error.response);
+        setError('The requested product is not found.');
+      });
     }, 800);
 
     try {
