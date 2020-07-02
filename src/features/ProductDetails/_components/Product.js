@@ -17,8 +17,8 @@ const StyledBox = styled(Box)`
   margin-bottom: 8px;
 `;
 
-const Product = ({ product, mainImage, description }) => {
-  const { id, name, genres, developers, publishers, released } = product;
+const Product = ({ product }) => {
+  const { id, name, description, images } = product;
 
   const { add, fetchProduct } = useCart();
   const history = useHistory();
@@ -43,7 +43,7 @@ const Product = ({ product, mainImage, description }) => {
         spacing={4}
       >
         <Grid item xs={12} sm={7}>
-          <Gallery id={id} />
+          <Gallery images={images.gamePreview} />
 
           <Typography marginBottom={4}>
             {description}
@@ -52,7 +52,7 @@ const Product = ({ product, mainImage, description }) => {
 
         <Grid item xs={12} sm={5}>
           <Image
-            src={mainImage}
+            src={images.main}
             alt={name}
           />
 
@@ -67,7 +67,7 @@ const Product = ({ product, mainImage, description }) => {
               </Typography>
 
               <Typography>
-                {released}
+                Feb 25, 2014
               </Typography>
             </StyledBox>
 
@@ -79,12 +79,7 @@ const Product = ({ product, mainImage, description }) => {
                 Developers
               </Typography>
 
-              {developers.map((developer) => (
-                <Tag
-                  key={developer.name}
-                  label={developer.name}
-                />
-              ))}
+              <Tag label="Eidos Montreal" />
             </StyledBox>
 
             <StyledBox>
@@ -95,12 +90,7 @@ const Product = ({ product, mainImage, description }) => {
                 Publishers
               </Typography>
 
-              {publishers.map((publisher) => (
-                <Tag
-                  key={publisher.name}
-                  label={publisher.name}
-                />
-              ))}
+              <Tag label="Square Enix" />
             </StyledBox>
 
             <StyledBox>
@@ -111,12 +101,8 @@ const Product = ({ product, mainImage, description }) => {
                 Genres
               </Typography>
 
-              {genres.map((genre) => (
-                <Tag
-                  key={genre.name}
-                  label={genre.name}
-                />
-              ))}
+              <Tag label="Action" />
+              <Tag label="Adventure" />
             </StyledBox>
           </Box>
         </Grid>

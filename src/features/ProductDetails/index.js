@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import axios from 'axios';
-
 import Wrapper from '../../components/Wrapper';
 
 import Product from './_components/Product';
@@ -12,27 +10,14 @@ import productsAPI from '../../api/products';
 
 const ProductDetails = ({ id }) => {
   const [product, setProduct] = useState(null);
-  const [mainImage, setMainImage] = useState('');
-  const [description, setDescription] = useState('');
   const [error, setError] = useState('');
 
   useEffect(() => {
-    setTimeout(() => {
-      axios.get(`https://api.rawg.io/api/games/${id}`)
-        .then((response) => {
-          setProduct(response.data)
-        }).catch(error => {
-        console.error(error.response);
-        setError('The requested product is not found.');
-      });
-    }, 800);
-
-    try {
-      const customProduct = productsAPI.fetchProduct(id);
-
-      setMainImage(customProduct.images.main);
-      setDescription(customProduct.description);
-    } catch (error) {
+    if (productsAPI.fetchProduct(id)) {
+      setTimeout(() => {
+        setProduct(productsAPI.fetchProduct(id));
+      }, 800)
+    } else {
       setError('The requested product is not found.');
     }
   }, [id]);
@@ -42,11 +27,7 @@ const ProductDetails = ({ id }) => {
       {!error ? (
         <>
           {product ? (
-            <Product
-              product={product}
-              mainImage={mainImage}
-              description={description}
-            />
+            <Product product={product} />
           ) : (
             <SkeletonProduct />
           )}

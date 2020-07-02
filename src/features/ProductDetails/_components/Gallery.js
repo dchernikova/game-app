@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import Lightbox from 'react-image-lightbox';
 
 import 'react-image-lightbox/style.css';
@@ -54,8 +53,7 @@ const params = {
   slidesPerView: 3,
 };
 
-const Gallery = ({ id }) => {
-  const [images, setImages] = useState([]);
+const Gallery = ({ images }) => {
   const [activeImage, setActiveImage] = useState(null);
   const [imageIndex, setImageIndex] = useState(0);
   const [imageIsOpen, setImageIsOpen] = useState(false);
@@ -67,14 +65,6 @@ const Gallery = ({ id }) => {
   };
   const moveToNextImage = () => setImageIndex((imageIndex + 1) % images.length);
   const moveToPrevImage = () => setImageIndex((imageIndex + images.length - 1) % images.length);
-
-  useEffect(() => {
-    axios.get(`https://api.rawg.io/api/games/${id}/screenshots`)
-      .then((response) => {
-        const images = response.data.results.map((item) => item.image);
-        setImages(images)
-      });
-  }, [id]);
 
   useEffect(() => {
     setActiveImage(images[0]);
