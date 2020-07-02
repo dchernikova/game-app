@@ -46,22 +46,22 @@ const Product = ({ product }) => {
           />
 
           <Box marginY={4}>
-            <Typography variant="body2" marginBottom={4}>
+            <Typography marginBottom={4}>
               {description}
             </Typography>
 
-            <Typography variant="body2" marginBottom={1}>
-              All reviews: <Typography variant="body2" component="span" color="secondary">Overwhelmingly Positive</Typography> (2 323)
-            </Typography>
-            <Typography variant="body2" marginBottom={1}>
-              Release date: <Typography variant="body2" component="span">18 Jun, 2020</Typography>
-            </Typography>
-            <Typography variant="body2">
-              Developer: <Typography variant="body2" component="span" color="secondary">Quantic Dream</Typography>
-            </Typography>
-            <Typography variant="body2">
-              Publisher: <Typography variant="body2" component="span" color="secondary">Quantic Dream</Typography>
-            </Typography>
+            {/*<Typography marginBottom={1}>*/}
+            {/*  All reviews: <Typography component="span" color="secondary">Overwhelmingly Positive</Typography> (2 323)*/}
+            {/*</Typography>*/}
+            {/*<Typography marginBottom={1}>*/}
+            {/*  Release date: <Typography component="span">18 Jun, 2020</Typography>*/}
+            {/*</Typography>*/}
+            {/*<Typography>*/}
+            {/*  Developer: <Typography component="span" color="secondary">Quantic Dream</Typography>*/}
+            {/*</Typography>*/}
+            {/*<Typography>*/}
+            {/*  Publisher: <Typography component="span" color="secondary">Quantic Dream</Typography>*/}
+            {/*</Typography>*/}
           </Box>
 
           {/*<Box marginY={4}>*/}

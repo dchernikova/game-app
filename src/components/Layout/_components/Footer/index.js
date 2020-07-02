@@ -16,13 +16,11 @@ import TwitterButton from '../../../Actions/TwitterButton';
 import FacebookButton from '../../../Actions/FacebookButton';
 import ProfileButton from '../../../Actions/ProfileButton';
 
-import Logo from '../Logos/Steam';
 import Link from '../Link';
-
-import ValveLegal from './_components/ValveLegal';
+import Logo from '../Logo';
 
 const Content = styled(Box)`
-  padding: 40px 0 24px;
+  padding: 40px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(${bg}) no-repeat center / cover;
 `;
 
@@ -32,7 +30,6 @@ const List = styled.ul`
 
   list-style-type: none;
 `;
-
 const StyledBox = styled(Box)`
   display: flex;
   align-items: center;
@@ -43,14 +40,14 @@ const Footer = () => (
   <Content component="footer">
     <Wrapper>
       <Box marginBottom={2}>
-        <Logo withText />
+        <Logo />
       </Box>
 
       <Typography>
-        The ultimate entertainment platform. Play, connect, create and more. Install Steam today and start gaming!
+        Search, comment, create and more!
       </Typography>
 
-      <Box marginY={4}>
+      <Box marginY={2}>
         <Grid container>
           {footerLinks.map(({ title, items }) => (
             <Grid key={title} item xs={12} md={3}>
@@ -79,7 +76,7 @@ const Footer = () => (
         </Grid>
       </Box>
 
-      <StyledBox marginY={4}>
+      <StyledBox>
         <Box>
           <ProfileButton />
           <CartButton />
@@ -91,8 +88,6 @@ const Footer = () => (
         </Box>
       </StyledBox>
     </Wrapper>
-
-    <ValveLegal />
   </Content>
 );
 

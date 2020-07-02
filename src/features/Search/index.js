@@ -59,7 +59,7 @@ const Search = () => {
     >
       <StyledInput
         type="search"
-        placeholder="Search the store"
+        placeholder="Search games"
         value={searchQuery}
         onChange={handleOnChange}
         endAdornment={

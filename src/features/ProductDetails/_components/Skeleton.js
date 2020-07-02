@@ -42,7 +42,7 @@ const SkeletonProduct = () => (
         <SkeletonImage />
 
         <Box marginY={4}>
-          <Typography variant="body2" marginBottom={4}>
+          <Typography marginBottom={4}>
             <Skeleton />
             <Skeleton />
             <Skeleton />
@@ -50,18 +50,18 @@ const SkeletonProduct = () => (
             <Skeleton />
           </Typography>
 
-          <Typography variant="body2" marginBottom={1}>
-            <Skeleton />
-          </Typography>
+          {/*<Typography marginBottom={1}>*/}
+          {/*  <Skeleton />*/}
+          {/*</Typography>*/}
 
-          <Typography variant="body2" marginBottom={1}>
-            <Skeleton />
-          </Typography>
+          {/*<Typography marginBottom={1}>*/}
+          {/*  <Skeleton />*/}
+          {/*</Typography>*/}
 
-          <Typography variant="body2">
-            <Skeleton />
-            <Skeleton />
-          </Typography>
+          {/*<Typography>*/}
+          {/*  <Skeleton />*/}
+          {/*  <Skeleton />*/}
+          {/*</Typography>*/}
         </Box>
       </Grid>
     </Grid>

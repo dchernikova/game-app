@@ -9,6 +9,7 @@ const Navigation = () => (
     {headerLinks.map(({ title, href }) => (
       <Link
         underline
+        uppercase
         href={href}
         key={title}
       >

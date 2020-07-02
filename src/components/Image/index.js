@@ -27,7 +27,6 @@ const Image = ({ src, alt, aspectRatio }) => {
       <Img
         src={src}
         alt={alt}
-        key={src}
         isLoaded={isLoaded}
         onLoad={handleOnLoad}
       />

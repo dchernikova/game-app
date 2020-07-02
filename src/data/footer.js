@@ -1,55 +1,51 @@
 const footerLinks = [
   {
-    title: 'About Steam',
+    title: 'New Releases',
     items: [
       {
-        text: 'What is Steam?',
+        text: 'Last 30 days',
         href: '/',
       },
       {
-        text: 'Gifting on Steam',
+        text: 'This week',
         href: '/',
       },
       {
-        text: 'The Steam Community',
+        text: 'Next week',
         href: '/',
       },
     ],
   },
   {
-    title: 'About Valve',
+    title: 'Genres',
     items: [
       {
-        text: 'About Valve?',
+        text: 'Strategy',
         href: '/',
       },
       {
-        text: 'Business Solutions',
+        text: 'Action',
         href: '/',
       },
       {
-        text: 'Steamworks',
-        href: '/',
-      },
-      {
-        text: 'Jobs',
+        text: 'RPG',
         href: '/',
       },
     ],
   },
   {
-    title: 'Help',
+    title: 'Browse',
     items: [
       {
-        text: 'Support',
+        text: 'Platforms',
         href: '/',
       },
       {
-        text: 'Forums',
+        text: 'Developers',
         href: '/',
       },
       {
-        text: 'Stats',
+        text: 'Reviews',
         href: '/',
       },
     ],

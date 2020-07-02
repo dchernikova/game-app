@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Layout from '../../components/Layout';
-
 import ProductDetails from '../../features/ProductDetails';
 
 const ProductPage = ({ match }) => {
@@ -9,11 +7,7 @@ const ProductPage = ({ match }) => {
     params: { productId },
   } = match;
 
-  return (
-    <Layout>
-      <ProductDetails id={productId} />
-    </Layout>
-  )
+  return <ProductDetails id={productId} />
 };
 
 export default ProductPage

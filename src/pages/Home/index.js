@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import Layout from '../../components/Layout';
 import Section from '../../components/Section';
 
 import SliderMain from '../../features/SliderMain';
@@ -22,7 +21,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <Layout>
+    <>
       <SliderMain slides={topProducts} />
 
       <Section title="Featured & Recommended">
@@ -36,7 +35,7 @@ const HomePage = () => {
       <Section title="Under $10 USD">
         <SliderProducts slides={discountProducts} />
       </Section>
-    </Layout>
+    </>
   )
 };
 

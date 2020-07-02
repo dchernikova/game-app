@@ -7,9 +7,9 @@ import Typography from '../../../Typography';
 
 const StyledLink = styled(
   ({
-     underline,
-     noPadding,
-     ...rest
+    underline,
+    noPadding,
+    ...rest
    }) => <NavLink {...rest} />,
 )`
   display: inline-flex;
@@ -50,7 +50,7 @@ const StyledLink = styled(
   }
 `;
 
-const Link = ({ children, color = 'primary', href, underline, noPadding }) => (
+const Link = ({ children, color = 'primary', href, underline, uppercase, noPadding }) => (
   <StyledLink
     exact
     to={href}
@@ -61,6 +61,7 @@ const Link = ({ children, color = 'primary', href, underline, noPadding }) => (
     <Typography
       component="span"
       color="inherit"
+      uppercase={uppercase}
     >
       {children}
     </Typography>

@@ -12,6 +12,8 @@ import theme from './theme';
 import { AuthenticationProvider } from './contexts/Authentication';
 import { CartProvider } from './contexts/Cart';
 
+import Layout from './components/Layout';
+
 import HomePage from './pages/Home';
 import ProfilePage from './pages/Profile';
 import ProductPage from './pages/Product';
@@ -26,13 +28,15 @@ const App = () => (
       <CartProvider>
         <HashRouter basename='/'>
           <ScrollToTop />
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/profile" exact component={ProfilePage} />
-            <Route path="/product/:productId" exact component={ProductPage} />
-            <Route path="/cart" exact component={CartPage} />
-            <Route component={NotFoundPage} />
-          </Switch>
+          <Layout>
+            <Switch>
+              <Route path="/" exact component={HomePage} />
+              <Route path="/profile" exact component={ProfilePage} />
+              <Route path="/product/:productId" exact component={ProductPage} />
+              <Route path="/cart" exact component={CartPage} />
+              <Route component={NotFoundPage} />
+            </Switch>
+          </Layout>
         </HashRouter>
       </CartProvider>
     </AuthenticationProvider>
